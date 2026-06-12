@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@theme {
+  --font-sans: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Amiri', serif;
+  --font-mono: 'Space Grotesk', monospace;
+  
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #faf6eb;
+  --color-gold-200: #eedcaf;
+  --color-gold-300: #e2c27b;
+  --color-gold-400: #c5a059;
+  --color-gold-500: #a17d3b;
+  --color-gold-600: #7d5b23;
+  --color-gold-700: #5a4634;
+  --color-gold-800: #3d2b1f;
+  --color-gold-900: #2d1e15;
+  --color-gold-950: #1b120c;
+
+  --color-stone-950: #1b120c;
+}
+
+@layer utilities {
+  .neon-glow-gold {
+    text-shadow: 0 0 10px rgba(212, 165, 76, 0.6), 0 0 20px rgba(212, 165, 76, 0.4), 0 0 30px rgba(212, 165, 76, 0.2);
+  }
+  .neon-glow-red {
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.5), inset 0 0 10px rgba(220, 38, 38, 0.2);
+  }
+  .warm-backlight {
+    box-shadow: 0 10px 40px -10px rgba(212, 165, 76, 0.35);
+  }
+  .glass-card {
+    background: rgba(18, 16, 14, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 165, 76, 0.15);
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #12100e;
+}
+::-webkit-scrollbar-thumb {
+  background: #3e2615;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c48b2d;
+}
